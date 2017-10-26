@@ -1,0 +1,36 @@
+.my-gallery {
+    width: 100%;
+    float: left;
+  }
+  .my-gallery img {
+    width: 100%;
+    height: auto;
+  }
+  .my-gallery figure {
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 150px;
+    height: 228px;
+  }
+  .my-gallery figcaption {
+    display: none;
+  }
+  .myhover{
+      background-color: rgba(50,50,50, 0.6);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      display: none;
+      color:white;
+      font-weight: bold;
+      padding: 5px;
+      cursor: pointer;
+  }
+  .my-gallery figure {display: block; position: relative;}
+  
+  .my-gallery div.gallery {display: none;}
+  body {background-color: #333}

@@ -1,0 +1,24 @@
+<!--
+
+  TODO: FALTA AGREGAR PHOTOSWIPE MEDIANTE CLICK A LA FOTO, PASANDO ID COMO PARAMETRO
+
+--> 
+  <h2> Galleria {{ site }}</h2>
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure *ngFor="let item of data?.data" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <div class="myhover" style="display: none;">{{ item.title }}</div>
+        <a href="#" itemprop="contentUrl" data-size="1024x1024">
+            <img src="{{ item.img }}" itemprop="thumbnail" alt="Image description" />
+            <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            {{#each this.subItems}}
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">                           
+                        <img src="" data-src="{{ srcPAth }}" itemprop="thumbnail" alt="Image description" style="display:none" data-size="1024x1024"/>                            
+                <figcaption itemprop="caption description"></figcaption>
+                </figure>
+            {{/each}}
+            </div>   
+        </a>
+    <!-- <figcaption itemprop="caption description">{{this.subItems.[1]}}</figcaption>
+      -->
+    </figure>     
+  </div>
